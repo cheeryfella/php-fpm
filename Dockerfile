@@ -87,7 +87,6 @@ RUN set -x \
 			| xargs -r apk info --installed \
 			| sort -u \
 	)" \
-	&& pecl install mongodb \
 	&& apk add --virtual .php-rundeps $runDeps \
 	&& apk del .phpize-deps .build-deps \
 	&& rm -rf /var/cache/apk/* \
